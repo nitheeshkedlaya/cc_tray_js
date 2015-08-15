@@ -14,7 +14,8 @@ angular
     'ngCookies',
     'ngResource',
     'ngRoute',
-    'ngSanitize'
+    'ngSanitize',
+    'cb.x2js'
   ])
   .config(function ($routeProvider) {
     $routeProvider
