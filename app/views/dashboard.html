@@ -1,4 +1,12 @@
-<div>
-  {{ip}}
+<div id="dashboard">
+  <a href="{{project._webUrl}}" ng-repeat="project in projects | orderBy:[-'_lastBuildTime']">
+    <div class="build {{project._lastBuildStatus | lowercase}} {{project._activity | lowercase}}">
+      <div class="project_name">
+        {{project._name}}
+      </div>
+      <div class="build_time">
+        {{project._lastBuildTime | timeAgo}}
+      </div>
+    </div>
+  </a>
 </div>
-

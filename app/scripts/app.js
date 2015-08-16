@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'cb.x2js'
+    'cb.x2js',
+    'yaru22.angular-timeago'
   ])
   .config(function ($routeProvider) {
     $routeProvider
