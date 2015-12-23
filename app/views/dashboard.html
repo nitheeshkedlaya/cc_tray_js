@@ -1,11 +1,12 @@
-<div id="dashboard">
-  <a href="{{project._webUrl}}" ng-repeat="project in projects | orderBy:[-'_lastBuildTime']">
-    <div class="build {{project._lastBuildStatus | lowercase}} {{project._activity | lowercase}}">
+<div id="dashboard" masonry='{"columnWidth": 20, "itemSelector" : ".tile"}'>
+  <a href="{{project._webUrl}}" ng-repeat="project in projects | orderBy:['_lastBuildStatus', -'_lastBuildTime']"
+     class="masonry-brick">
+    <div class="build {{project.lastBuildStatus | lowercase}} {{project.activity | lowercase}}">
       <div class="project_name">
-        {{project._name}}
+        {{project.name}}
       </div>
       <div class="build_time">
-        {{project._lastBuildTime | timeAgo}}
+        {{project.lastBuildTime | timeAgo}}
       </div>
     </div>
   </a>

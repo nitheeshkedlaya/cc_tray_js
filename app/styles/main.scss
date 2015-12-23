@@ -1,8 +1,9 @@
 #dashboard {
   .build {
-    width: 98%;
-    min-height: 20px;
-    padding: 3px 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    min-height: 30px;
+    padding: 5px 10px;
+    display: inline-block;
     border: 1px grey solid;
     a{
       text-decoration: none;
@@ -10,17 +11,29 @@
     }
 
     .build_time{
-      margin-right: 20px;
+      margin: 5px 0 15px 5px;
       float: right;
+      font-style: italic;
+      font-size: 80%;
     }
 
     .project_name{
       float: left;
+      margin-right: 15px;
     }
 
     &.success{
+      color: white;
       background: green;
-      color: #ffffff;
+    }
+    &.failure{
+      color: white;
+      background: red;
+    }
+    &.exception{
+      color: white;
+      background: black;
     }
   }
+
 }
